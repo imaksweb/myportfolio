@@ -10,6 +10,8 @@ const autoprefixer = require('gulp-autoprefixer');
 
 const del = require('del');
 
+const browserSync = require('browser-sync').create();
+
 const paths = {
     root: './build',
     templates: {
@@ -48,6 +50,28 @@ function clean() {
     return del(paths.root);
 };
 
+// галповский вотчер
+function watch() {
+    gulp.watch(paths.styles.src, styles);
+    gulp.watch(paths.templates.src, templates);
+};
+
+// локальный сервер
+function serve() {
+    browserSync.init({
+        server: paths.root
+    });
+    browserSync.watch(paths.root + '/**/*.*', browserSync.reload);
+};
+
 exports.templates = templates;
 exports.styles = styles;
 exports.clean = clean;
+exports.watch = watch;
+exports.serve = serve;
+
+gulp.task('default', gulp.series(
+    clean,
+    gulp.parallel(templates, styles),
+    gulp.parallel(watch, serve)
+));
