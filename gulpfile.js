@@ -8,6 +8,8 @@ const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
 
+const del = require('del');
+
 const paths = {
     root: './build',
     templates: {
@@ -41,5 +43,11 @@ function styles() {
         .pipe(gulp.dest(paths.styles.dest));
 };
 
+// очистка
+function clean() {
+    return del(paths.root);
+};
+
 exports.templates = templates;
 exports.styles = styles;
+exports.clean = clean;
