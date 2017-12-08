@@ -12,6 +12,10 @@ const del = require('del');
 
 const browserSync = require('browser-sync').create();
 
+const gulpWebpack = require('gulp-webpack');
+const webpack = require('webpack');
+const webpackConfig = require('./webpack.config.js');
+
 const paths = {
     root: './build',
     templates: {
@@ -21,6 +25,10 @@ const paths = {
     styles: {
         src: 'src/styles/**/*.scss',
         dest: 'build/assets/styles/'
+    },
+    scripts: {
+        src: 'src/scripts/**/*.js',
+        dest: 'build/assets/scripts/'
     }
 };
 
@@ -45,6 +53,13 @@ function styles() {
         .pipe(gulp.dest(paths.styles.dest));
 };
 
+// webpack
+function scripts() {
+    return gulp.src('src/scripts/main.js')
+        .pipe(gulpWebpack(webpackConfig, webpack)) 
+        .pipe(gulp.dest(paths.scripts.dest));
+}
+
 // очистка
 function clean() {
     return del(paths.root);
@@ -54,6 +69,7 @@ function clean() {
 function watch() {
     gulp.watch(paths.styles.src, styles);
     gulp.watch(paths.templates.src, templates);
+    gulp.watch(paths.scripts.src, scripts);
 };
 
 // локальный сервер
@@ -72,6 +88,6 @@ exports.serve = serve;
 
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(templates, styles),
+    gulp.parallel(templates, styles, scripts),
     gulp.parallel(watch, serve)
 ));
