@@ -8,6 +8,11 @@ const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
 const tinypng = require('gulp-tinypng');
+const svgmin = require('gulp-svgmin');
+const replace = require('gulp-replace');
+const cheerio = require('gulp-cheerio');
+const svgSprite = require('gulp-svgsprite');
+const notify = require('gulp-notify');
 
 const del = require('del');
 
@@ -38,6 +43,14 @@ const paths = {
     fonts: {
         src: 'src/fonts/**/*.{woff,woff2}',
         dest: 'build/assets/fonts'
+    },
+    svg: {
+        src: 'src/sprite/*.svg',
+        dest: 'build/assets/images/'
+    },
+    png: {
+        src: 'src/icons/*.png',
+        dest: 'build/assets/images/icons/'
     }
 };
 
@@ -45,6 +58,12 @@ const paths = {
 function templates() {
     return gulp.src(paths.templates.pages)
         .pipe(pug({ pretty: true }))
+        .on('error', notify.onError(function(error) {
+            return {
+              title: 'Pug',
+              message:  error.message
+            };
+          }))
         .pipe(gulp.dest(paths.root));
 };
 
@@ -52,7 +71,7 @@ function templates() {
 function styles_dev() {
     return gulp.src('./src/styles/main.scss')
         .pipe(sourcemaps.init())
-        .pipe(sass())
+        .pipe(sass()).on('error', notify.onError({ title: 'Style' }))
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false
@@ -91,6 +110,38 @@ function fonts() {
         .pipe(gulp.dest(paths.fonts.dest));
 }
 
+// svg sprite
+function sprite_svg() {
+    return gulp.src(paths.svg.src)
+        .pipe(svgmin({
+            js2svg: {
+            pretty: true
+            }
+        }))
+        .pipe(cheerio({
+            run: function ($) {
+              $('[fill]').removeAttr('fill');
+              $('[stroke]').removeAttr('stroke');
+              $('[style]').removeAttr('style');
+            },
+            parserOptions: {
+              xmlMode: true
+            }
+        }))
+        .pipe(replace('&gt;', '>'))
+        .pipe(svgSprite({
+            mode: {
+              symbol: {
+                sprite: "sprite.svg",
+                example: {
+                  dest: 'spriteSvgDemo.html' // демо html
+                }
+              }
+            }
+          }))
+        .pipe(gulp.dest(paths.svg.dest));
+};
+
 // webpack
 function scripts() {
     return gulp.src('src/scripts/main.js')
@@ -110,6 +161,7 @@ function watch() {
     gulp.watch(paths.scripts.src, scripts);
     gulp.watch(paths.images.src, images_dev);
     gulp.watch(paths.fonts.src, fonts);
+    gulp.watch(paths.svg.src, sprite_svg);
 };
 
 // локальный сервер
@@ -122,19 +174,20 @@ function serve() {
 
 // exports.templates = templates;
 // exports.styles_dev = styles_dev;
-// exports.clean = clean;
+exports.clean = clean;
 // exports.watch = watch;
 // exports.serve = serve;
 // exports.imagemin_dev = imagemin_dev;
+exports.sprite_svg = sprite_svg;
 
 gulp.task('default', gulp.series(
     clean,
-    gulp.parallel(templates, styles_dev, scripts, images_dev, fonts),
+    gulp.parallel(templates, styles_dev, scripts, images_dev, fonts, sprite_svg),
     gulp.parallel(watch, serve)
 ));
 
 gulp.task('build', gulp.series(
     clean,
-    gulp.parallel(templates, styles_build, scripts, images_build, fonts),
+    gulp.parallel(templates, styles_build, scripts, images_build, fonts, sprite_svg),
     gulp.parallel(watch, serve)
 ));
