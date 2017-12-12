@@ -1,0 +1,35 @@
+.hero {
+    display: inline-block;
+    text-align: center;
+}
+
+.hero__data {
+    background: rgba(#fcfcfc, .85);
+    padding: rem(36px) 0;
+}
+
+.hero__pic {
+    width: rem(140px);
+    height: rem(140px);
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto rem(14px);
+}
+
+.hero__pic-img {
+    display: block;
+    max-width: 100%;
+}
+
+.hero__descr {
+    margin-bottom: rem(28px);
+}
+
+.hero__title {
+    @include roboto(500);
+    font-size: rem(28px);
+}
+
+.hero__subtitle {
+    font-size: rem(16px);
+}

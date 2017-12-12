@@ -1,0 +1,27 @@
+.menu {
+    display: flex;
+}
+
+.menu__item {
+    display: block;
+    border-right: 2px solid #73c8c0;
+
+    &:last-child {
+        border-right: none;
+    }
+}
+
+.menu__link {
+    text-decoration: none;
+    display: block;
+    @include roboto(500);
+    font-size: rem(16px);
+    color: #fff;
+    padding: rem(12px) rem(30px);
+    background: rgba($green, .85);
+
+    &:hover {
+        background: rgba($darkGreen, .85);
+    }
+}
+  
