@@ -12,7 +12,7 @@ block content
             .hero
                 .hero__data
                     .hero__pic
-                        img.hero__pic-img(src="assets/images/content/hero.jpg", alt="")
+                        img.hero__pic-img(src="./assets/images/content/hero.jpg", alt="")
                     .hero__descr
                         .hero__title Максимов Илья
                         .hero__subtitle Личный сайт веб-разработчика
@@ -22,7 +22,7 @@ block content
                                 li.socials__item
                                     a.socials__link(href="#")
                                         svg.socials__link-img
-                                            use(xlink:href=`assets/images/sprite.svg#${item}`)
+                                            use(xlink:href=`./assets/images/sprite.svg#${item}`)
                 nav.hero__menu
                     ul.menu
                         each item in ['Мои работы', 'Обо мне', 'Блог']
