@@ -47,10 +47,6 @@ const paths = {
     svg: {
         src: 'src/sprite/*.svg',
         dest: 'build/assets/images/'
-    },
-    png: {
-        src: 'src/icons/*.png',
-        dest: 'build/assets/images/icons/'
     }
 };
 
@@ -174,11 +170,11 @@ function serve() {
 
 // exports.templates = templates;
 // exports.styles_dev = styles_dev;
-exports.clean = clean;
+// exports.clean = clean;
 // exports.watch = watch;
 // exports.serve = serve;
 // exports.imagemin_dev = imagemin_dev;
-exports.sprite_svg = sprite_svg;
+// exports.sprite_svg = sprite_svg;
 
 gulp.task('default', gulp.series(
     clean,
