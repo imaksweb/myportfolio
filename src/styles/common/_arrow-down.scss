@@ -1,0 +1,18 @@
+.arrow-down {
+    display: inline-block;
+
+    &:hover {
+        .arrow-down__ico {
+            fill: #fff;
+            transform: scale(1.2);
+        }
+    }
+}
+
+.arrow-down__ico {
+    display: block;
+    width: rem(26px);
+    height: rem(16px);
+    fill: rgba(#fff, .7);
+    transition: .35s;
+}

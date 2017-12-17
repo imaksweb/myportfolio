@@ -1,0 +1,36 @@
+.contacts {
+    display: inline-block;
+    background: rgba(#fff, .85);
+    border-radius: 5px;
+    padding: rem(30px);
+}
+
+.contacts__subtitle {
+    text-align: center;
+}
+
+.contacts__item {
+    margin-bottom: rem(20px);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.contacts__link {
+    text-decoration: none;
+    color: $dark;
+    display: inline-flex;
+}
+
+.contacts__icon {
+    width: 24px;
+    height: 24px;
+    fill: $green;
+    margin-right: rem(10px);
+}
+
+.contacts__data {
+    @include ff-main(500);
+    opacity: .8;
+}

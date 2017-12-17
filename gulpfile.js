@@ -11,7 +11,7 @@ const tinypng = require('gulp-tinypng');
 const svgmin = require('gulp-svgmin');
 const replace = require('gulp-replace');
 const cheerio = require('gulp-cheerio');
-const svgSprite = require('gulp-svgsprite');
+const svgSprite = require('gulp-svg-sprite');
 const notify = require('gulp-notify');
 
 const del = require('del');

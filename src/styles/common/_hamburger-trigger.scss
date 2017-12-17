@@ -1,0 +1,41 @@
+.hamburger-trigger {
+    display: inline-block;
+    flex-direction: column;
+    justify-content: space-between;
+    width: rem(40px);
+    height: rem(28px);
+}
+
+.hamburger-trigger_active {
+    .habmurger-trigger__bar_top {
+        transform: translateY(-50%) rotate(-45deg);
+        top: 50%;
+    }
+
+    .habmurger-trigger__bar_middle {
+        opacity: 0;
+    }
+
+    .habmurger-trigger__bar_bottom {
+        bottom: 50%;
+        transform: translateY(50%) rotate(45deg);
+    }
+}
+
+.hamburger-trigger__bar {
+    width: 100%;
+    height: rem(5px);
+    background: #fff;
+    border-radius: rem(3px);
+    display: block; position: absolute;
+    transition: .5s;
+}
+
+.habmurger-trigger__bar_middle {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.habmurger-trigger__bar_bottom {
+    bottom: 0;
+}

@@ -1,0 +1,135 @@
+.slider {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100vh;
+}
+
+.slider__info {
+    background: #f0efe9;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider__info-wrap {
+    max-width: rem(460px);
+    text-align: center;
+}
+
+.slider__info-title {
+    margin-bottom: rem(30px);
+}
+
+.slider__tags {
+    @include ff-main(500);
+    text-transform: uppercase;
+    color: $green;
+    border-top: 1px solid rgba(#109c8e, .3);
+    border-bottom: 1px solid rgba(#109c8e, .3);
+    text-align: center;
+    margin: rem(30px);
+    padding: rem(18px) 0;
+}
+
+.slider__link-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    background: $green;
+    border: 1px solid $green;
+    border-radius: 5px;
+    @include ff-main(500);
+    width: rem(198px);
+    padding: rem(12px) 0;
+    transition: .35s;
+
+    &:hover {
+        background: transparent;
+        color: $green;
+
+        .slider__link-icon {
+            fill: $green;
+        }
+    }
+}
+
+.slider__link-icon {
+    width: 20px;
+    height: 19px;
+    fill: #fff;
+    margin-right: rem(10px);
+    transition: .35s;
+}
+
+.slider__display {
+    background: #efebe0;
+    width: 50%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider__pic {
+    max-width: rem(640px);
+}
+
+.slider__img {
+    max-width: 100%;
+}
+
+.slider__btns {
+    width: 50%;
+    height: 30%;
+    display: flex;
+    position: relative;
+}
+
+.slider__btn-prev, .slider__btn-next {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+
+    &:hover {
+        .slider__btns-overlay {
+            opacity: .5;
+        }
+    }
+}
+
+.slider__btn-img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.slider__btn-icon {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 45px;
+    height: 29px;
+    fill: #fff;
+    z-index: 10;
+}
+
+.slider__btns-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(#b6b4ae, .7);
+    transition: .5s;
+}

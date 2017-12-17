@@ -1,0 +1,49 @@
+.about__content {
+    display: flex;   
+}
+
+.about__left, .about__right {
+    width: 50%;;
+    padding-bottom: rem(60px);
+}
+
+.about__left {
+    background: #efeee9;
+}
+
+.about__left-content {
+    display: flex;
+}
+
+.about__title {
+    background-image: url('../images/bgs/titles/about-title_bg.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: contain;
+    align-self: flex-start;
+    width: 50%;
+    text-align: center;
+}
+
+.about__info {
+    width: 50%;
+}
+
+.about__right {
+    background: #eeebdf;
+    padding: 0 2%;
+}
+
+.about__subtitle {
+    max-width: rem(420px);
+    margin: 0 auto rem(40px);
+}
+
+.about__text {
+    margin-bottom: rem(50px);
+}
+
+.skills-row__title {
+    @include ff-main(500);
+    font-size: rem(28px);
+}

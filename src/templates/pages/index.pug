@@ -10,24 +10,12 @@ block content
                 a.authorisation__link(href="#") Авторизоваться
         .welcome__hero
             .hero
-                .hero__data
-                    .hero__pic
-                        img.hero__pic-img(src="./assets/images/content/hero.jpg", alt="")
-                    .hero__descr
-                        .hero__title Максимов Илья
-                        .hero__subtitle Личный сайт веб-разработчика
+                .hero__data.hero__data_bg-white
+                    +hero(hero)
                     .hero__socials
-                        ul.socials
-                            each item in ['vk', 'github', 'in']
-                                li.socials__item
-                                    a.socials__link(href="#")
-                                        svg.socials__link-img
-                                            use(xlink:href=`./assets/images/sprite.svg#${item}`)
+                        +socials(socials)
                 nav.hero__menu
-                    ul.menu
-                        each item in ['Мои работы', 'Обо мне', 'Блог']
-                            li.menu__item
-                                a.menu__link(href="#") #{item}
-        .welcome__copyright
-            .copyright.copyright_white &#169; Максимов Илья | создано с любовью в LoftSchool | 2018
+                    +menu(menu)
+        .welcome__copyright.copyright_white
+            include ../common/_copyright
 

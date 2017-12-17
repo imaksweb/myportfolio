@@ -10,8 +10,8 @@
 
 .welcome__authorisation {
     position: absolute;
-    top: 3%;
-    right: 3%;
+    top: 4%;
+    right: 2%;
 }
 
 .authorisation {
@@ -22,13 +22,13 @@
 
 .authorisation__link {
     text-decoration: none;
-    @include roboto(500);
+    @include ff-main(500);
     color: #fff;
     display: block;
     padding: rem(10px) 0;
     border: 1px solid #fff;
     border-radius: rem(5px);
-    transition: .3s;
+    transition: .35s;
 
     &:hover {
         background: #fff;
@@ -41,10 +41,24 @@
     margin: auto;
     border-radius: rem(5px);
     overflow: hidden;
+
+    .hero__descr {
+        color: $dark;
+    }
 }
 
 .hero__socials {
     display: inline-block;
+
+    .socials__link-img {
+        fill: rgba($green, .5);
+    }
+
+    .socials__link:hover {
+        .socials__link-img {
+            fill: $green;
+        }
+    }
 }
 
 .welcome__copyright {

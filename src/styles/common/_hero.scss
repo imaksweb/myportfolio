@@ -1,11 +1,15 @@
 .hero {
     display: inline-block;
     text-align: center;
+    min-width: rem(380px);
 }
 
 .hero__data {
-    background: rgba(#fcfcfc, .85);
     padding: rem(36px) 0;
+}
+
+.hero__data_bg-white {
+    background: rgba(#fcfcfc, .85);
 }
 
 .hero__pic {
@@ -23,10 +27,11 @@
 
 .hero__descr {
     margin-bottom: rem(28px);
+    color: #fff;
 }
 
 .hero__title {
-    @include roboto(500);
+    @include ff-main(500);
     font-size: rem(28px);
 }
 

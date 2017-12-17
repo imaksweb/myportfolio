@@ -4,14 +4,28 @@
 
 // base
 @import "layout/_fonts";
+@import "fontawesome/font-awesome";
 @import "layout/_normalize";
 @import "layout/_base";
 @import "layout/_adjustment";
 
-
-// blocks
-@import "sections/_welcome";
+// common
 @import "common/_hero";
 @import "common/_socials";
 @import "common/_menu";
 @import "common/_copyright";
+@import "common/_hamburger-trigger";
+@import "common/_arrow-down";
+@import "common/_titles";
+@import "common/_user";
+@import "common/_text-block";
+@import "common/_contacts";
+@import "common/_footer";
+@import "common/_slider";
+
+// blocks
+@import "sections/_welcome";
+@import "sections/_section-header";
+@import "sections/_about-content";
+@import "sections/_about-contacts";
+@import "sections/_myworks";

@@ -87,21 +87,29 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'fontawesome';
+    src: url('../fonts/fontawesome/fontawesome-webfont.woff2') format('woff2'),
+         url('../fonts/fontawesome/fontawesome-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
-@mixin bernier($weight: regular) {
+
+@mixin ff-titles($weight: regular) {
     @if $weight ==  regular {
-        font-family: 'bernier_regularregular', sans-serif;
+        font-family: $ff-titles;
     }
     @if $weight == distressed {
-        font-family: 'bernier_distressedregular', sans-serif;
+        font-family: $ff-titles-distressed;
     }
     @if $weight == shade {
-        font-family: 'bernier_shaderegular', sans-serif;
+        font-family: $ff-titles-shade;
     }
 }
 
-@mixin roboto($weight: 400, $style: normal) {
-    font-family: 'roboto';
+@mixin ff-main($weight: 400, $style: normal) {
+    font-family: $ff-main;
     @if $weight == 300 {
         font-weight: 300;
     }
