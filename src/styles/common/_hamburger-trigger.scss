@@ -1,9 +1,8 @@
 .hamburger-trigger {
     display: inline-block;
-    flex-direction: column;
-    justify-content: space-between;
     width: rem(40px);
-    height: rem(28px);
+    height: rem(36px);
+    position: relative;
 }
 
 .hamburger-trigger_active {
@@ -27,7 +26,8 @@
     height: rem(5px);
     background: #fff;
     border-radius: rem(3px);
-    display: block; position: absolute;
+    display: block; 
+    position: absolute;
     transition: .5s;
 }
 

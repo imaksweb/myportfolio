@@ -1,10 +1,21 @@
 .myworks {
     height: 100vh;
+    background: #faf8f0;
 }
 
 .myworks__title {
     text-align: center;
     padding-bottom: rem(30px);
+    position: relative;
+    z-index: 10;
+}
+
+.works__triangles {
+    margin-top: -150px;
+}
+
+.triangle_fill-biege {
+    fill: #faf8f0;
 }
 
 .works__title {
@@ -171,4 +182,10 @@
     &:hover {
         background: $green;
     }
+}
+
+.myworks__footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }

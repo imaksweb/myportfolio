@@ -1,10 +1,9 @@
 section.myworks
     .myworks__title
-        .myworks__triangles
-            .myworks__triangle.myworks__triangle_left
-                svg.triangle.triangle_fill-white
-            .myworks__triangle.myworks__triangle_right
-                svg.triangle.triangle_fill-white
+        .works__triangles
+        svg.triangle.triangle_fill-biege(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none")
+            polygon.left(points="0,0   0,86   500.8,86   500.8,75.5")
+            polygon.right(points="1000,0   1000,86   500,86   500,75.5")
         .title.works__title #{title}
     .myworks__slider
         include ../common/_slider.pug
@@ -43,4 +42,5 @@ section.myworks
                 .form__btns
                     button.form__btn(type="submit" name="send") Отправить
                     button.form__btn(type="reset" name="reset") Очистить
-        include ../common/_footer
+        .myworks__footer
+            include ../common/_footer

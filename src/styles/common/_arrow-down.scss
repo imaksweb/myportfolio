@@ -1,5 +1,7 @@
 .arrow-down {
     display: inline-block;
+    position: relative;
+    z-index: 100;
 
     &:hover {
         .arrow-down__ico {
