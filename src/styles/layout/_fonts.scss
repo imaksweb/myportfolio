@@ -87,15 +87,6 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'fontawesome';
-    src: url('../fonts/fontawesome/fontawesome-webfont.woff2') format('woff2'),
-         url('../fonts/fontawesome/fontawesome-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
 @mixin ff-titles($weight: regular) {
     @if $weight ==  regular {
         font-family: $ff-titles;

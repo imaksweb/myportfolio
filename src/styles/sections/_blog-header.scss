@@ -1,6 +1,6 @@
 .blog-header {
     background-image: url('../images/bgs/about_bg.jpg');
-    background-position: center top;
+    background-position: 50% 50%;
     background-repeat: no-repeat;
     background-size: cover;
     height: 420px;
@@ -25,18 +25,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.blog-header__pic {
-    width: 141px;
-    height: 141px;
-    border-radius: 50%;
-    overflow: hidden;
-    display: inline-block;
-}
-
-.blog-header__pic-img {
-    max-width: 100%;
 }
 
 .blog-header__title {

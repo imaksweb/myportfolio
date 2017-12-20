@@ -4,10 +4,10 @@
 
 // base
 @import "layout/_fonts";
-@import "fontawesome/font-awesome";
 @import "layout/_normalize";
 @import "layout/_base";
 @import "layout/_adjustment";
+@import "layout/fontawesome/font-awesome";
 
 // common
 @import "common/_hero";
@@ -22,6 +22,8 @@
 @import "common/_contacts";
 @import "common/_footer";
 @import "common/_slider";
+@import "common/_triangles";
+@import "common/_skills";
 
 // blocks
 @import "sections/_welcome";

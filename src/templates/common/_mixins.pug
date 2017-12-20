@@ -18,19 +18,19 @@ mixin footer-menu(menu)
             li.footer-menu__item
                 a.footer-menu__link(href=`${item.link}`) #{item.title}
 
-mixin hero(hero)
-    each item in hero
-        .hero__pic
-            img.hero__pic-img(src=`${item.img}`, alt="")
-        .hero__descr
-            .hero__title #{item.title}
-            .hero__subtitle #{item.subtitle}
+mixin hero-pic(hero)
+    .hero__pic
+        img.hero__pic-img(src=`${hero.img}`, alt="")
+
+mixin hero-descr(hero)
+    .hero__descr
+        .hero__title #{hero.title}
+        .hero__subtitle #{hero.subtitle}
 
 mixin arrow-down(arrow)
-    each item in arrow
-        a.arrow-down(href=`${item.link}`)
-            svg.arrow-down__ico
-                use(xlink:href=`./assets/images/symbol/sprite.svg#${item.icon}`)
+    a.arrow-down(href=`${arrow.link}`)
+        svg.arrow-down__ico
+            use(xlink:href=`./assets/images/symbol/sprite.svg#${arrow.icon}`)
 
 mixin skills(skills)
     ul.skills
@@ -39,7 +39,11 @@ mixin skills(skills)
                 .skills-row__title #{item.title}
                 ul.skills-row__list
                     each items in item.list
-                        li.skills-row__item #{items}
+                        li.skills-row__item
+                            svg.circles(viewbox='0 0 110 110')
+                                circle.circle__first(r="45" cx="50%" cy="50%" fill="none")
+                                circle.circle__second.circle-50(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)")
+                                .skills-row__item-title=`${items}`
 
 mixin contacts(contacts)
     .contacts

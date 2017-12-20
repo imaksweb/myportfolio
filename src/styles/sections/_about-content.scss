@@ -1,11 +1,9 @@
-.about__content {
-    display: flex;   
-}
-
 .about__triangles {
     margin-top: -150px;
-    position: relative;
-    z-index: 10;
+}
+
+.about__content {
+    display: flex;   
 }
 
 .about__triangle {
@@ -57,9 +55,4 @@
 
 .about__text {
     margin-bottom: rem(50px);
-}
-
-.skills-row__title {
-    @include ff-main(500);
-    font-size: rem(28px);
 }
