@@ -1,3 +1,11 @@
+.myworks-header {
+    position: relative;
+
+    .triangles {
+        fill: #faf8f0;
+    }
+}
+
 .myworks {
     height: 100vh;
     background: #faf8f0;
@@ -10,27 +18,11 @@
     z-index: 10;
 }
 
-.works__triangles {
-    margin-top: -150px;
-}
-
-.triangle_fill-biege {
-    fill: #faf8f0;
-}
-
 .works__title {
     background-image: url('../images/bgs/titles/works-title_bg.png');
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: contain;
-}
-
-.myworks__triangles {
-    display: flex;
-}
-
-.myworks__triangle {
-    flex: 1;
 }
 
 .myworks__reviews {

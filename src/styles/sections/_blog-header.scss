@@ -5,6 +5,11 @@
     background-size: cover;
     height: 420px;
     padding-top: rem(35px);
+    position: relative;
+
+    .triangles {
+        fill: #fff;
+    }
 }
 
 .blog-header__container {

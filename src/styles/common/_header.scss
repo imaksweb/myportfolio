@@ -1,4 +1,4 @@
-.section__header {
+.header {
     background-image: url('../images/bgs/titles/about_header-title_bg.png'), url('../images/bgs/about_bg.jpg');
     background-position: center center, center top;
     background-repeat: no-repeat, no-repeat;
@@ -7,20 +7,20 @@
     position: relative;
 }
 
-.section__socials {
+.header__socials {
     display: inline-block;
     position: absolute;
     left: 2%;
     top: 4%;
 }
 
-.section__humburger-trigger {
+.header__humburger-trigger {
     position: absolute;
     top: 4%;
     right: 2%;
 }
 
-.section__hero {
+.header__hero {
     position: absolute;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
@@ -31,7 +31,7 @@
     }
 }
 
-.section__arrow {
+.header__arrow {
     position: absolute;
     left: 50%;
     bottom: 6%;
