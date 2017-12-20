@@ -13,7 +13,7 @@
 }
 
 .blog-header__container {
-    width: rem(1144px);
+    max-width: rem(1144px);
     margin: 0 auto;
     background-image: url('../images/bgs/titles/blog_header-title_bg.png');
     background-position: 50% bottom;

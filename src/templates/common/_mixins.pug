@@ -12,9 +12,9 @@ mixin menu(menu)
             li.menu__item
                 a.menu__link(href=`${item.link}`) #{item.title}
 
-mixin footer-menu(menu)
+mixin footer-menu(footer_menu)
     ul.footer-menu
-        each item in menu
+        each item in footer_menu
             li.footer-menu__item
                 a.footer-menu__link(href=`${item.link}`) #{item.title}
 
