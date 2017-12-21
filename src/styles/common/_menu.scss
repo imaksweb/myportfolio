@@ -1,0 +1,29 @@
+.menu {
+    display: flex;
+}
+
+.menu__item {
+    display: block;
+    border-right: 2px solid #73c8c0;
+    flex: 1;
+
+    &:last-child {
+        border-right: none;
+    }
+}
+
+.menu__link {
+    text-decoration: none;
+    display: block;
+    @include ff-main(500);
+    font-size: rem(16px);
+    color: #fff;
+    padding: rem(12px) 0;
+    background: rgba($green, .85);
+    transition: .5s;
+
+    &:hover {
+        background: rgba($darkGreen, .85);
+    }
+}
+  

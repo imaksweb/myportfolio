@@ -1,0 +1,40 @@
+.hero {
+    display: inline-block;
+    text-align: center;
+    min-width: rem(380px);
+}
+
+.hero__data {
+    padding: rem(36px) 0;
+}
+
+.hero__data_bg-white {
+    background: rgba(#fcfcfc, .85);
+}
+
+.hero__pic {
+    width: rem(140px);
+    height: rem(140px);
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto rem(14px);
+}
+
+.hero__pic-img {
+    display: block;
+    max-width: 100%;
+}
+
+.hero__descr {
+    margin-bottom: rem(28px);
+    color: #fff;
+}
+
+.hero__title {
+    @include ff-main(500);
+    font-size: rem(28px);
+}
+
+.hero__subtitle {
+    font-size: rem(16px);
+}

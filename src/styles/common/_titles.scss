@@ -1,0 +1,36 @@
+.title {
+    @include ff-titles;
+    font-size: rem(65px);
+    color: $dark;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+
+    &:before, &:after {
+        content: '';
+        width: 22px;
+        height: 5px;
+        background: rgba($dark, .2);
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    &:before {
+        right: 100%;
+        margin-right: 10px
+    }
+
+    &:after {
+        left: 100%;
+        margin-left: 10px;
+    }
+}
+
+.subtitle {
+    font-size: rem(35px);
+}

@@ -1,7 +1,22 @@
-extends ../template
+extends ../_template
 
 block variables
-    - var title = 'Добро пожаловать'
+    - var title = 'Главная'
 
 block content
-    h1 Главная
+    section.welcome
+        .welcome__authorisation
+            .authorisation
+                a.authorisation__link(href="#") Авторизоваться
+        .welcome__hero
+            .hero
+                .hero__data.hero__data_bg-white
+                    +hero-pic(hero)
+                    +hero-descr(hero)
+                    .hero__socials
+                        +socials(socials)
+                nav.hero__menu
+                    +menu(menu)
+        .welcome__copyright.copyright_white
+            include ../common/_copyright
+

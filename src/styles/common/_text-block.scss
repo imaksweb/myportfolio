@@ -1,0 +1,7 @@
+.text-block p {
+    margin-bottom: rem(20px);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

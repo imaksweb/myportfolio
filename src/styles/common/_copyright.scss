@@ -1,0 +1,8 @@
+.copyright {
+    @include ff-main(300);
+    font-size: rem(16px);
+
+    &_white {
+        color: #fff;
+    }
+}

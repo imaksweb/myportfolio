@@ -1,0 +1,37 @@
+.socials {
+    display: inline-flex;
+}
+
+.socials__item {
+    width: rem(32px);
+    height: rem(32px);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-right: rem(24px);
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.socials__link {
+    display: block;
+
+    &:hover {
+        .socials__link-img {
+            fill: #fff;
+        }
+        .socials__link-img_green {
+            fill: $green;
+        }
+    }
+}
+
+.socials__link-img {
+    fill: rgba(#fff, .5);
+    display: block;
+    width: rem(30px);
+    height: rem(22px);
+    transition: .35s;
+}

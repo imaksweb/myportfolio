@@ -1,0 +1,58 @@
+mixin socials(socials)
+    ul.socials
+        each item in socials
+            li.socials__item
+                a.socials__link(href=`${item.link}`)
+                    svg.socials__link-img
+                        use(xlink:href=`./assets/images/symbol/sprite.svg#${item.icon}`)
+
+mixin menu(menu)
+    ul.menu
+        each item in menu
+            li.menu__item
+                a.menu__link(href=`${item.link}`) #{item.title}
+
+mixin footer-menu(footer_menu)
+    ul.footer-menu
+        each item in footer_menu
+            li.footer-menu__item
+                a.footer-menu__link(href=`${item.link}`) #{item.title}
+
+mixin hero-pic(hero)
+    .hero__pic
+        img.hero__pic-img(src=`${hero.img}`, alt="")
+
+mixin hero-descr(hero)
+    .hero__descr
+        .hero__title #{hero.title}
+        .hero__subtitle #{hero.subtitle}
+
+mixin arrow-down(arrow)
+    a.arrow-down(href=`${arrow.link}`)
+        svg.arrow-down__ico
+            use(xlink:href=`./assets/images/symbol/sprite.svg#${arrow.icon}`)
+
+mixin skills(skills)
+    ul.skills
+        each item in skills
+            li.skills__item
+                .skills-row__title #{item.title}
+                ul.skills-row__list
+                    each items in item.list
+                        li.skills-row__item
+                            svg.circles(viewbox='0 0 110 110')
+                                circle.circle__first(r="45" cx="50%" cy="50%" fill="none")
+                                circle.circle__second.circle-50(r="45" cx="50%" cy="50%" transform="rotate(-90 55 55)")
+                            .skills-row__item-title=`${items}`
+
+mixin contacts(contacts)
+    .contacts
+        .contacts__subtitle
+            .title.subtitle Контакты
+        ul.contacts__list
+            each item in contacts
+                li.contacts__item
+                    a.contacts__link(href=`${item.link}${item.data}`)
+                        svg.contacts__icon
+                            use(xlink:href=`./assets/images/symbol/sprite.svg#${item.icon}`)
+                        .contacts__data=`${item.data}`

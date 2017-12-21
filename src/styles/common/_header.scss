@@ -1,0 +1,40 @@
+.header {
+    background-image: url('../images/bgs/titles/about_header-title_bg.png'), url('../images/bgs/about_bg.jpg');
+    background-position: center center, center top;
+    background-repeat: no-repeat, no-repeat;
+    background-size: auto, cover;
+    height: 100%;
+    position: relative;
+}
+
+.header__socials {
+    display: inline-block;
+    position: absolute;
+    left: 2%;
+    top: 4%;
+}
+
+.header__humburger-trigger {
+    position: absolute;
+    top: 4%;
+    right: 2%;
+}
+
+.header__hero {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+
+    .hero__title {
+        font-size: rem(35px);
+    }
+}
+
+.header__arrow {
+    position: absolute;
+    left: 50%;
+    bottom: 6%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
