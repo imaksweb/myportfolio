@@ -5,18 +5,35 @@
 .user__photo {
     margin-bottom: rem(40px);
     width: 100%;
+    text-align: center;
+
+    @include laptops {
+        margin-bottom: rem(20px);
+    }
 }
 
 .user__photo-img {
     display: block;
     max-width: 100%;
+
+    @include tablets {
+        display: inline-block;
+    }
 }
 
 .user__title {
     margin-bottom: rem(40px);
     text-align: center;
+
+    @include laptops {
+        margin-bottom: rem(20px);
+    }
 }
 
 .user__text {
     padding-right: rem(30px);
+
+    @include laptops {
+        padding-right: 0;
+    }
 }

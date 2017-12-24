@@ -10,6 +10,13 @@
     &:last-child {
         border-right: none;
     }
+
+    @include phones {
+        &:first-child {
+            flex-basis: rem(110px);
+            flex-grow: .3;
+        }
+    }
 }
 
 .menu__link {

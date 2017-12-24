@@ -3,6 +3,11 @@
     width: rem(40px);
     height: rem(36px);
     position: relative;
+
+    @include phones {
+        width: rem(25px);
+        height: rem(22px);
+    }
 }
 
 .hamburger-trigger_active {
@@ -23,12 +28,16 @@
 
 .hamburger-trigger__bar {
     width: 100%;
-    height: rem(5px);
+    height: 5px;
     background: #fff;
     border-radius: rem(3px);
     display: block; 
     position: absolute;
     transition: .5s;
+
+    @include phones {
+        height: 4px;
+    }
 }
 
 .habmurger-trigger__bar_middle {

@@ -16,6 +16,11 @@
     .socials__link {
         width: 100%;
         height: 100%;
+
+        @include tablets {
+            width: 36px;
+            height: 36px;
+        }
     }
 
     .socials__link-img {
@@ -26,10 +31,19 @@
     .copyright {
         color: rgba(#fff, .5);
     }
+
+    @include tablets {
+        flex-direction: column;
+        padding: rem(20px) rem(15px);
+    }
 }
 
 .footer-menu {
     display: inline-flex;
+
+    @include tablets {
+        margin-bottom: rem(20px);
+    }
 }
 
 .footer-menu__item {
@@ -37,6 +51,10 @@
 
     &:last-child {
         margin-right: 0;
+    }
+
+    @include tablets {
+        margin-right: rem(10px);
     }
 }
 
@@ -49,6 +67,10 @@
     &:hover {
         color: $green;
     }
+
+    @include tablets {
+        font-size: rem(14px);
+    }
 }
 
 .footer__text {
@@ -56,4 +78,10 @@
     color: rgba(#fff, .5);
     font-size: rem(16px);
     max-width: rem(510px);
+
+    @include tablets {
+        font-size: rem(13px);
+        text-align: center;
+        margin-bottom: rem(10px);
+    }
 }

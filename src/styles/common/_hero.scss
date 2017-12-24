@@ -2,6 +2,11 @@
     display: inline-block;
     text-align: center;
     min-width: rem(380px);
+
+    @include phones {
+        width: 100%;
+        min-width: 0;
+    }
 }
 
 .hero__data {
@@ -33,8 +38,16 @@
 .hero__title {
     @include ff-main(500);
     font-size: rem(28px);
+
+    @include phones {
+        font-size: rem(21px);
+    }
 }
 
 .hero__subtitle {
     font-size: rem(16px);
+
+    @include phones {
+        font-size: rem(14px);
+    }
 }

@@ -13,6 +13,10 @@
     &:last-child {
         margin-right: 0;
     }
+
+    @include phones {
+        height: rem(20px);
+    }
 }
 
 .socials__link {
@@ -34,4 +38,9 @@
     width: rem(30px);
     height: rem(22px);
     transition: .35s;
+
+    @include phones {
+        width: rem(25px);
+        height: rem(18px);
+    }
 }

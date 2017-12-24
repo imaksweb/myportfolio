@@ -4,6 +4,11 @@
     flex-wrap: wrap;
     width: 100%;
     height: 100vh;
+
+    @include tablets {
+        flex-direction: column;
+        height: initial;
+    }
 }
 
 .slider__info {
@@ -14,6 +19,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @include tablets {
+        width: 100%;
+        order: 5;
+        padding: rem(35px) 0 rem(50px);
+    }
+
+    @include phones {
+        padding: rem(25px) 0;
+    }
 }
 
 .slider__info-wrap {
@@ -23,6 +38,10 @@
 
 .slider__info-title {
     margin-bottom: rem(30px);
+
+    @include phones {
+        margin-bottom: rem(18px);
+    }
 }
 
 .slider__tags {
@@ -34,6 +53,10 @@
     text-align: center;
     margin: rem(30px);
     padding: rem(18px) 0;
+
+    @include phones {
+        margin: 0 0 rem(18px);
+    }
 }
 
 .slider__link-btn {
@@ -75,6 +98,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include tablets {
+        width: 100%;
+        height: 100%;
+        padding: rem(100px) 0 rem(50px);
+    }
+
+    @include phones {
+        padding: rem(40px) 0;
+    }
 }
 
 .slider__pic {
@@ -90,6 +123,12 @@
     height: 30%;
     display: flex;
     position: relative;
+
+    @include tablets {
+        width: 100%;
+        height: 100%;
+        order: 10;
+    }
 }
 
 .slider__btn-prev, .slider__btn-next {

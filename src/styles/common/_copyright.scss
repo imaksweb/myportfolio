@@ -5,4 +5,13 @@
     &_white {
         color: #fff;
     }
+
+    @include tablets {
+        font-size: rem(14px);
+    }
+
+    @include phones {
+        font-size: rem(13px);
+        text-align: center;
+    }
 }

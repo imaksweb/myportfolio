@@ -18,6 +18,15 @@
     left: 50%;
     top: 40%;
     transform: translateX(-50%) translateY(-50%);
+
+    @include phones {
+        top: 36%;
+        display: block;
+        width: 100%;
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+    }
 }
 
 .about__footer {

@@ -12,6 +12,11 @@
     position: absolute;
     top: 4%;
     right: 2%;
+
+    @include phones {
+        right: 50%;
+        transform: translateX(50%);
+    }
 }
 
 .authorisation {
@@ -45,6 +50,10 @@
     .hero__descr {
         color: $dark;
     }
+
+    @include phones {
+        width: 94%;
+    }
 }
 
 .hero__socials {
@@ -66,4 +75,6 @@
     left: 50%;
     transform: translateX(-50%);
     bottom: 3%;
+    width: 100%;
+    text-align: center;
 }

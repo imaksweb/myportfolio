@@ -3,6 +3,11 @@
     background: rgba(#fff, .85);
     border-radius: 5px;
     padding: rem(30px);
+
+    @include phones {
+        padding: rem(10px);
+        display: block;
+    }
 }
 
 .contacts__subtitle {
