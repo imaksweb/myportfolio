@@ -72,14 +72,51 @@
     border-radius: rem(5px);
     overflow: hidden;
     position: relative;
+    perspective: 1000px;
+    width: 380px;
+    height: 398px;
 
     .hero__descr {
         color: $dark;
     }
 
+    &:hover {
+        // .welcome__flipper {
+        //     transform: rotateY(180deg);
+        // }
+    }
+
     @include phones {
         width: 94%;
     }
+}
+
+.welcome__flipper {
+    transition: .6s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+.welcome__flipper_rotate {
+    transform: rotateY(180deg);
+}
+
+.hero, .authorisation-back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 380px;
+    height: 398px;
+}
+
+.hero {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+.authorisation-back {
+    transform: rotateY(180deg);
 }
 
 .hero__socials {
@@ -94,6 +131,10 @@
             fill: $green;
         }
     }
+}
+
+.authorisation-back__data {
+    height: 398px;
 }
 
 .welcome__copyright {

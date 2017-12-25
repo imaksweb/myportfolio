@@ -12,16 +12,21 @@ block content
             
         .welcome__authorisation
             .authorisation
-                a.authorisation__link(href="#") Авторизоваться
+                a.authorisation__link#authorisation-btn(href="#") Авторизоваться
         .welcome__hero
-            .hero
-                .hero__data.hero__data_bg-white
-                    +hero-pic(hero)
-                    +hero-descr(hero)
-                    .hero__socials
-                        +socials(socials)
-                nav.hero__menu
-                    +menu(menu)
+            .welcome__flipper
+                .hero
+                    .hero__data.hero__data_bg-white
+                        +hero-pic(hero)
+                        +hero-descr(hero)
+                        .hero__socials
+                            +socials(socials)
+                    nav.hero__menu
+                        +menu(menu)
+                .authorisation-back
+                    .hero__data_bg-white.authorisation-back__data
+                        .authorisation__title.title.subtitle Авторизуйтесь
+                        a(href="#").back На главную
         .welcome__copyright.copyright_white
             include ../common/_copyright
 
