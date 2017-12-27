@@ -16,24 +16,24 @@
         font-size: rem(35px);
     }
 
-    &:before, &:after {
-        content: '';
-        width: 22px;
-        height: 5px;
-        background: rgba($dark, .2);
-        display: inline-block;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-    }
+    // &:before, &:after {
+    //     content: '';
+    //     width: 22px;
+    //     height: 5px;
+    //     background: rgba($dark, .2);
+    //     display: inline-block;
+    //     position: absolute;
+    //     top: 50%;
+    //     transform: translateY(-50%);
+    // }
 
-    &:before {
-        left: 0;
-    }
+    // &:before {
+    //     left: 0;
+    // }
 
-    &:after {
-        right: 0;
-    }
+    // &:after {
+    //     right: 0;
+    // }
 }
 
 .subtitle {

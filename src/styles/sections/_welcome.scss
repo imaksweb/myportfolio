@@ -80,14 +80,28 @@
         color: $dark;
     }
 
-    &:hover {
-        // .welcome__flipper {
-        //     transform: rotateY(180deg);
-        // }
+    .hero, .authorisation-back {
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 380px;
+        height: 398px;
+
+        @include phones {
+            width: 300px;
+            height: 373px;
+        }
+    }
+    
+    .hero {
+        z-index: 2;
+        transform: rotateY(0deg);
     }
 
     @include phones {
-        width: 94%;
+        width: 300px;
+        height: 373px;
     }
 }
 
@@ -99,20 +113,6 @@
 
 .welcome__flipper_rotate {
     transform: rotateY(180deg);
-}
-
-.hero, .authorisation-back {
-    backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 380px;
-    height: 398px;
-}
-
-.hero {
-    z-index: 2;
-    transform: rotateY(0deg);
 }
 
 .authorisation-back {

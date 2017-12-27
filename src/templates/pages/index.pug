@@ -26,7 +26,39 @@ block content
                 .authorisation-back
                     .hero__data_bg-white.authorisation-back__data
                         .authorisation__title.title.subtitle Авторизуйтесь
-                        a(href="#").back На главную
+                        .authorisation__form
+                            form.form__elem
+                                .form__content
+                                    .form__row
+                                        .form__block
+                                            input.form__input(type="text" name="login" id="login" placeholder="Логин" required)
+                                            .form__input-ico
+                                                svg.form__input-svg(width="15px" height="16px")
+                                                    use(xlink:href="./assets/images/symbol/sprite.svg#login")
+                                    .form__row
+                                        .form__block
+                                            input.form__input(type="password" name="password" id="password" placeholder="Пароль" required)
+                                            .form__input-ico
+                                                svg.form__input-svg(width="15px" height="16px")
+                                                    use(xlink:href="./assets/images/symbol/sprite.svg#password")
+                                    .form__options
+                                        .form__options-row
+                                            input.form__checkbox.visually-hidden(type="checkbox" name="ishuman" id="ishuman" value="1")
+                                            label.form__checkbox-label(for="ishuman") Я человек
+                                                svg.form__checkbox-icon(width="11px" height="9px")
+                                                    use(xlink:href="./assets/images/symbol/sprite.svg#check")
+                                        .form__options-row.form__options-title Вы точно не робот?
+                                        .form__options-row
+                                            input.form__radio.visually-hidden(type="radio" name="robot" id="human" value="human")
+                                            label.form__radio-label(for="human") Да
+                                            input.form__radio.visually-hidden(type="radio" name="robot" id="robot" value="robot")
+                                            label.form__radio-label(for="robot") Не уверен
+                                        .form__options-btns
+                                            ul.form__options-list
+                                                li.form__options-item
+                                                    a.form__options-link.back(href="#") На главную
+                                                li.form__options-item
+                                                    a.form__options-link(href="#") Войти
         .welcome__copyright.copyright_white
             include ../common/_copyright
 

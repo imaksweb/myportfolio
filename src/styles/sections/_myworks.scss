@@ -179,6 +179,7 @@
     border-radius: 5px;
     padding-top: rem(30px);
     overflow: hidden;
+    position: relative;
 
     @include phones {
         width: 90%;
