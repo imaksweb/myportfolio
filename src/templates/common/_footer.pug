@@ -1,7 +1,12 @@
 footer.footer
     .footer__row
-        +footer-menu(footer_menu)
-        +socials(socials_round)
+        .footer__col
+            +menu(menu, 'footer')
+        .footer__col
+            include ../common/_socials
     .footer__row
-        .footer__text Я веб-разработчик из Полтавы, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
-        include ../common/_copyright
+        .footer__col
+            .footer__info Я веб-разработчик из Полтавы, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
+        .footer__col
+            .footer__copyright
+                include ../common/_copyright

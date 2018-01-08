@@ -5,60 +5,61 @@ block variables
 
 block content
     section.welcome
-        .parallax#parallax
-            - for (var i = 1; i <= 7; i++)
+        .welcome__parallax#parallax
+            - for (var i = 1; i < 9; i++)
                 .parallax__layer
-                    img.parallax__img(src=`./assets/images/content/parallax/layer-${i}.png`)
-            
-        .welcome__authorisation
-            .authorisation
-                a.authorisation__link#authorisation-btn(href="#") Авторизоваться
-        .welcome__hero
-            .welcome__flipper
-                .hero
-                    .hero__data.hero__data_bg-white
-                        +hero-pic(hero)
-                        +hero-descr(hero)
-                        .hero__socials
-                            +socials(socials)
-                    nav.hero__menu
-                        +menu(menu)
-                .authorisation-back
-                    .hero__data_bg-white.authorisation-back__data
-                        .authorisation__title.title.subtitle Авторизуйтесь
-                        .authorisation__form
-                            form.form__elem
-                                .form__content
-                                    .form__row
-                                        .form__block
-                                            input.form__input(type="text" name="login" id="login" placeholder="Логин" required)
-                                            .form__input-ico
-                                                svg.form__input-svg(width="15px" height="16px")
-                                                    use(xlink:href="./assets/images/symbol/sprite.svg#login")
-                                    .form__row
-                                        .form__block
-                                            input.form__input(type="password" name="password" id="password" placeholder="Пароль" required)
-                                            .form__input-ico
-                                                svg.form__input-svg(width="15px" height="16px")
-                                                    use(xlink:href="./assets/images/symbol/sprite.svg#password")
-                                    .form__options
-                                        .form__options-row
-                                            input.form__checkbox.visually-hidden(type="checkbox" name="ishuman" id="ishuman" value="1")
-                                            label.form__checkbox-label(for="ishuman") Я человек
-                                                svg.form__checkbox-icon(width="11px" height="9px")
-                                                    use(xlink:href="./assets/images/symbol/sprite.svg#check")
-                                        .form__options-row.form__options-title Вы точно не робот?
-                                        .form__options-row
-                                            input.form__radio.visually-hidden(type="radio" name="robot" id="human" value="human")
-                                            label.form__radio-label(for="human") Да
-                                            input.form__radio.visually-hidden(type="radio" name="robot" id="robot" value="robot")
-                                            label.form__radio-label(for="robot") Не уверен
-                                        .form__options-btns
-                                            ul.form__options-list
-                                                li.form__options-item
-                                                    a.form__options-link.back(href="#") На главную
-                                                li.form__options-item
-                                                    a.form__options-link(href="#") Войти
-        .welcome__copyright.copyright_white
-            include ../common/_copyright
+                    img(src=`./assets/images/bg/parallax/${i}.png`).parallax__img
 
+        .welcome__authorisation-btn
+            a(href="#").authorisation-btn#authorisation-btn Авторизоваться
+        
+        .welcome__flip
+            .flip-container
+                .flipper
+                    .front
+                        .front__content
+                            .front__hero
+                                include ../common/_hero
+                            .front__socials
+                                include ../common/_socials
+                        .front__nav
+                            +menu(welcome_menu, 'welcome')
+                    .back
+                        .authorisation
+                            .authorisation__content
+                                .authorisation__title.subtitle Авторизуйтесь
+                                .authorisation__form
+                                    form(action="" method="post").login-form#autherisation-form
+                                        .form-content
+                                            .form__inputs
+                                                .form__input-wrap
+                                                    input(type="text" name="login" placeholder="Логин" required).form__input#login
+                                                    .form__input-icon
+                                                        svg(width="16px" height="16px").form__input-svg
+                                                            use(xlink:href="./assets/images/symbol/sprite.svg#login")
+                                                .form__input-wrap
+                                                    input(type="password" name="password" placeholder="Пароль" required).form__input#password
+                                                    .form__input-icon
+                                                        svg(width="16px" height="16px").form__input-svg
+                                                            use(xlink:href="./assets/images/symbol/sprite.svg#password")
+                                            .form__options
+                                                .form__row
+                                                    input(type="checkbox" name="ishuman" value="1").form__checkbox.visually-hidden#ishuman
+                                                    label(for="ishuman").form__checkbox-label Я человек
+                                                        svg(width="11px" height="9px").form__checkbox-icon
+                                                            use(xlink:href="./assets/images/symbol/sprite.svg#check")
+                                                .form__row
+                                                    .form__options-text Вы точно не робот?
+                                                    input(type="radio" name="robot" value="human").form__radio.visually-hidden#human
+                                                    label(for="human").form__radio-label Да
+                                                    input(type="radio" name="robot" value="robot").form__radio.visually-hidden#robot
+                                                    label(for="robot").form__radio-label Не уверен
+                                            .form__btns
+                                                ul.form__btns-list
+                                                    li.form__btns-item
+                                                        a(href="#").form__btns-link.back-btn На главную
+                                                    li.form__btns-item
+                                                        button(type="submit" name="enter").form__btns-link Войти
+        .welcome__copyright
+            include ../common/_copyright
+                                    

@@ -1,53 +1,42 @@
 .hero {
-    display: inline-block;
     text-align: center;
-    min-width: rem(380px);
-
-    @include phones {
-        width: 100%;
-        min-width: 0;
-    }
-}
-
-.hero__data {
-    padding: rem(36px) 0;
-}
-
-.hero__data_bg-white {
-    background: rgba(#fcfcfc, .85);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 .hero__pic {
-    width: rem(140px);
-    height: rem(140px);
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     overflow: hidden;
-    margin: 0 auto rem(14px);
+    margin-bottom: 12px;
 }
 
 .hero__pic-img {
-    display: block;
+    display: inline-block;
     max-width: 100%;
-}
-
-.hero__descr {
-    margin-bottom: rem(28px);
-    color: #fff;
 }
 
 .hero__title {
     @include ff-main(500);
-    font-size: rem(28px);
+    font-size: 35px;
+    color: #fff;
+    display: block;
 
     @include phones {
-        font-size: rem(21px);
+        font-size: 21px;
     }
 }
 
 .hero__subtitle {
-    font-size: rem(16px);
+    @include ff-main(300);
+    font-size: 16px;
+    color: #fff;
+    display: block;
 
     @include phones {
-        font-size: rem(14px);
+        font-size: 14px;
     }
 }

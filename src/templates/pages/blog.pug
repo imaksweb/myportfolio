@@ -4,6 +4,13 @@ block variables
     - var title = 'Блог'
 
 block content
-    include ../sections/_blog-header
-    include ../sections/_blog-content
-    include ../common/_footer
+    section.blog
+        include ../common/_header
+        include ../sections/_blog-content
+        .blog__mobile-menu-wrap
+            ul.blog-mobile-menu
+                li.blog-mobile-menu__item.blog-mobile-menu__item_active Самое важное в SASS
+                li.blog-mobile-menu__item Приёмы в вёрстке, без которых не обходится ни один сайт
+                li.blog-mobile-menu__item Самый необходимый набор Gulp плагинов
+                li.blog-mobile-menu__item Почему я выбрал Jade
+            .mobile-menu__trigger

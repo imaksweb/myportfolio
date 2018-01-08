@@ -13,80 +13,157 @@
   </head>
   <body>
     <div class="wrapper">
-      <header class="header myworks-header">
-        <div class="header__socials">
-          <ul class="socials">
-            <li class="socials__item"><a class="socials__link" href="#">
-                <svg class="socials__link-img">
-                  <use xlink:href="./assets/images/symbol/sprite.svg#vk"></use>
-                </svg></a></li>
-            <li class="socials__item"><a class="socials__link" href="#">
-                <svg class="socials__link-img">
-                  <use xlink:href="./assets/images/symbol/sprite.svg#github"></use>
-                </svg></a></li>
-            <li class="socials__item"><a class="socials__link" href="#">
-                <svg class="socials__link-img">
-                  <use xlink:href="./assets/images/symbol/sprite.svg#in"></use>
-                </svg></a></li>
-          </ul>
-        </div>
-        <div class="header__humburger-trigger"><a class="hamburger-trigger" href="#"><span class="hamburger-trigger__bar habmurger-trigger__bar_top"></span><span class="hamburger-trigger__bar habmurger-trigger__bar_middle"></span><span class="hamburger-trigger__bar habmurger-trigger__bar_bottom"></span></a></div>
-        <div class="header__hero">
-          <div class="hero">
-            <div class="hero__data">
-              <div class="hero__pic"><img class="hero__pic-img" src="./assets/images/content/hero.jpg" alt=""/></div>
-              <div class="hero__descr">
-                <div class="hero__title">Илья Максимов</div>
-                <div class="hero__subtitle">Личный сайт веб-разработчика</div>
-              </div>
+      <section class="works">
+        <section class="header">
+          <div class="header__socials">
+            <ul class="socials">
+              <li class="socials__item"><a class="socials__link" href="#">
+                  <svg class="socials__link-img" width="28px" height="22px">
+                    <use xlink:href="./assets/images/symbol/sprite.svg#vk"></use>
+                  </svg></a></li>
+              <li class="socials__item"><a class="socials__link" href="#">
+                  <svg class="socials__link-img" width="28px" height="22px">
+                    <use xlink:href="./assets/images/symbol/sprite.svg#github"></use>
+                  </svg></a></li>
+              <li class="socials__item"><a class="socials__link" href="#">
+                  <svg class="socials__link-img" width="28px" height="22px">
+                    <use xlink:href="./assets/images/symbol/sprite.svg#in"></use>
+                  </svg></a></li>
+            </ul>
+          </div>
+          <div class="header__hamburger-btn"><a class="hamburger-btn" href="" id="hamburger-btn"><span class="hamburger-btn__bar hamburger-btn__bar_top"></span><span class="hamburger-btn__bar hamburger-btn__bar_middle"></span><span class="hamburger-btn__bar hamburger-btn__bar_bottom"></span></a></div>
+          <div class="hide-menu" id="hide-menu">
+            <div class="hide-menu__left"></div>
+            <div class="hide-menu__right"></div>
+            <ul class="nav-menu">
+              <li class="nav-menu__item"><a class="nav-menu__link" href="works.html">Мои работы</a></li>
+              <li class="nav-menu__item"><a class="nav-menu__link" href="about.html">Обо мне</a></li>
+              <li class="nav-menu__item"><a class="nav-menu__link" href="blog.html">Блог</a></li>
+              <li class="nav-menu__item"><a class="nav-menu__link" href="index.html">Авторизация</a></li>
+            </ul>
+          </div>
+          <div class="header__hero">
+            <div class="hero">
+              <div class="hero__pic"><img class="hero__pic-img" src="./assets/images/content/hero.jpg"></div>
+              <div class="hero__title">Илья Максимов</div>
+              <div class="hero__subtitle">Личный сайт веб-разработчика</div>
             </div>
           </div>
-        </div>
-        <div class="header__arrow"><a class="arrow-down" href="#">
-            <svg class="arrow-down__ico">
-              <use xlink:href="./assets/images/symbol/sprite.svg#arrow_down"></use>
-            </svg></a>
-        </div>
-        <svg class="triangles" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none">
-          <polygon class="left" points="0,0 0,86 500.8,86 500.8,75.5"></polygon>
-          <polygon class="right" points="1000,0 1000,86 500,86 500,75.5"></polygon>
-        </svg>
-      </header>
-      <section class="myworks">
-        <div class="myworks__title">
-          <div class="title works__title">Мои работы</div>
-        </div>
-        <div class="myworks__slider">
+          <div class="triangles">
+            <svg class="triangles__svg" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none">
+              <polygon class="left" points="0,0   0,86   500.8,86   500.8,75.5"></polygon>
+              <polygon class="right" points="1000,0   1000,86   500,86   500,75.5"></polygon>
+            </svg>
+          </div>
+          <div class="header__arrow-down">
+            <div class="arrow-down"><a class="arrow-down__link" href="#">
+                <svg class="arrow-down__icon" width="26px" height="16px">
+                  <use xlink:href="./assets/images/symbol/sprite.svg#arrow_down"></use>
+                </svg></a></div>
+          </div>
+        </section>
+        <section class="works__slider">
           <div class="slider">
             <div class="slider__info">
               <div class="slider__info-wrap">
-                <div class="title subtitle slider__info-title">Сайт школы онлайн образования</div>
-                <div class="slider__tags">html, css, javascript</div><a class="slider__link-btn" href="#">
-                  <svg class="slider__link-icon">
-                    <use xlink:href="assets/images/symbol/sprite.svg#link"></use>
-                  </svg>
-                  <div class="slider__link-text">Посмотреть сайт</div></a>
+                <ul class="info-list">
+                  <li class="info__item">
+                    <div class="info-title">
+                      <div class="subtitle">Агентсво интернет решений &quot;ITLoft&quot;</div>
+                    </div>
+                    <div class="info-tags">node</div>
+                    <div class="info-btn"><a class="slider__info-link" href="#">
+                        <svg class="slider__link-icon" width="20px" height="19px">
+                          <use xlink:href="./assets/images/symbol/sprite.svg#link"></use>
+                        </svg>
+                        <div class="slider__link-text">Посмотреть сайт</div></a></div>
+                  </li>
+                  <li class="info__item">
+                    <div class="info-title">
+                      <div class="subtitle">Школа онлайн-образования &quot;LoftScool&quot;</div>
+                    </div>
+                    <div class="info-tags">html, css3, javascript, php</div>
+                    <div class="info-btn"><a class="slider__info-link" href="#">
+                        <svg class="slider__link-icon" width="20px" height="19px">
+                          <use xlink:href="./assets/images/symbol/sprite.svg#link"></use>
+                        </svg>
+                        <div class="slider__link-text">Посмотреть сайт</div></a></div>
+                  </li>
+                  <li class="info__item">
+                    <div class="info-title">
+                      <div class="subtitle">Портал обучающих уроков &quot;LoftBlog&quot;</div>
+                    </div>
+                    <div class="info-tags">ruby on rails, javascript, restful</div>
+                    <div class="info-btn"><a class="slider__info-link" href="#">
+                        <svg class="slider__link-icon" width="20px" height="19px">
+                          <use xlink:href="./assets/images/symbol/sprite.svg#link"></use>
+                        </svg>
+                        <div class="slider__link-text">Посмотреть сайт</div></a></div>
+                  </li>
+                  <li class="info__item">
+                    <div class="info-title">
+                      <div class="subtitle">Сайт &quot;Атма йога&quot;</div>
+                    </div>
+                    <div class="info-tags">ux, design, seo</div>
+                    <div class="info-btn"><a class="slider__info-link" href="#">
+                        <svg class="slider__link-icon" width="20px" height="19px">
+                          <use xlink:href="./assets/images/symbol/sprite.svg#link"></use>
+                        </svg>
+                        <div class="slider__link-text">Посмотреть сайт</div></a></div>
+                  </li>
+                </ul>
               </div>
             </div>
             <div class="slider__display">
-              <div class="slider__pic"><img class="slider__img" src="assets/images/content/slides/slide-1.png" alt="S;ider picture"></div>
+              <div class="slider__display-wrap">
+                <ul class="display__list">
+                  <li class="display__item"><img class="display__img" src="./assets/images/content/slides/1.png" alt="" srcset=""></li>
+                  <li class="display__item"><img class="display__img" src="./assets/images/content/slides/2.png" alt="" srcset=""></li>
+                  <li class="display__item"><img class="display__img" src="./assets/images/content/slides/3.png" alt="" srcset=""></li>
+                  <li class="display__item"><img class="display__img" src="./assets/images/content/slides/4.png" alt="" srcset=""></li>
+                </ul>
+              </div>
             </div>
-            <div class="slider__btns"><a class="slider__btn-prev" href="#"><img class="slider__btn-img" src="assets/images/content/slides/slide_prev-2.png" alt="Previous slide button">
-                <svg class="slider__btn-icon">
-                  <use xlink:href="assets/images/symbol/sprite.svg#portf_arrow_down"></use>
-                </svg>
-                <div class="slider__btns-overlay"></div></a><a class="slider__btn-next" href="#"><img class="slider__btn-img" src="assets/images/content/slides/slide_prev-3.png" alt="Next slide button">
-                <svg class="slider__btn-icon">
-                  <use xlink:href="assets/images/symbol/sprite.svg#portf_arrow_up"></use>
-                </svg>
-                <div class="slider__btns-overlay"></div></a></div>
+            <div class="slider__btns"> 
+              <div class="controls controls__prev">
+                <div class="controls__arrow">
+                  <svg class="controls__pic">
+                    <use xlink:href="./assets/images/symbol/sprite.svg#arrow_down"></use>
+                  </svg>
+                </div>
+                <div class="controls__bg">
+                  <ul class="controls__bg-list">
+                    <li class="controls__bg-item"><img class="slider-img" src="./assets/images/content/slides/1.png" alt="" srcset=""></li>
+                    <li class="controls__bg-item"><img class="slider-img" src="./assets/images/content/slides/2.png" alt="" srcset=""></li>
+                    <li class="controls__bg-item"><img class="slider-img" src="./assets/images/content/slides/3.png" alt="" srcset=""></li>
+                    <li class="controls__bg-item"><img class="slider-img" src="./assets/images/content/slides/4.png" alt="" srcset=""></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="controls controls__next">  
+                <div class="controls__arrow">
+                  <svg class="controls__pic">
+                    <use xlink:href="./assets/images/symbol/sprite.svg#portf_arrow_up"></use>
+                  </svg>
+                </div>
+                <div class="controls__bg">
+                  <ul class="controls__bg-list">
+                    <li class="controls__bg-item"><img class="slider-img" src="./assets/images/content/slides/1.png" alt="" srcset=""></li>
+                    <li class="controls__bg-item"><img class="slider-img" src="./assets/images/content/slides/2.png" alt="" srcset=""></li>
+                    <li class="controls__bg-item"><img class="slider-img" src="./assets/images/content/slides/3.png" alt="" srcset=""></li>
+                    <li class="controls__bg-item"><img class="slider-img" src="./assets/images/content/slides/4.png" alt="" srcset=""></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="myworks__reviews">
-          <div class="title reviews__title">Что обо мне говорят</div>
+        </section>
+        <section class="works__reviews">
+          <div class="reviews__title">
+            <div class="title">Что обо мне говорят</div>
+          </div>
           <div class="reviews">
             <div class="reviews__col">
-              <div class="reviews__quotes"><i class="fa fa-quote-left"></i></div>
               <div class="text-block reviews__text">
                 <p>Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!</p>
               </div>
@@ -99,7 +176,6 @@
               </div>
             </div>
             <div class="reviews__col">
-              <div class="reviews__quotes"><i class="fa fa-quote-left"></i></div>
               <div class="text-block reviews__text">
                 <p>Этот код выдержит любые испытания. Только пожалуйста, не загружайте сайт на слишком старых браузерах!    </p>
               </div>
@@ -113,50 +189,60 @@
             </div>
           </div>
           <div class="reviews__form">
-            <div class="title subtitle form__title">Связаться со мной</div>
+            <div class="subtitle form__title">Связаться со мной</div>
             <form class="form__elem">
               <div class="form__elem-wrap">
                 <input class="reviews__input" type="text" placeholder="Имя">
                 <input class="reviews__input" type="text" placeholder="Email">
                 <textarea class="revies__textarea" placeholder="Ваше сообщение"></textarea>
               </div>
-              <div class="form__btns">
-                <button class="form__btn" type="submit" name="send">Отправить</button>
-                <button class="form__btn" type="reset" name="reset">Очистить</button>
+              <div class="reviews-form__btns">
+                <button class="reviews-form__btn" type="submit" name="send">Отправить</button>
+                <button class="reviews-form__btn" type="reset" name="reset">Очистить</button>
               </div>
             </form>
           </div>
-          <div class="myworks__footer">
+          <div class="works__footer">
             <footer class="footer">
               <div class="footer__row">
-                <ul class="footer-menu">
-                  <li class="footer-menu__item"><a class="footer-menu__link" href="works.html">Мои работы</a></li>
-                  <li class="footer-menu__item"><a class="footer-menu__link" href="about.html">Обо мне</a></li>
-                  <li class="footer-menu__item"><a class="footer-menu__link" href="blog.html">Блог</a></li>
-                  <li class="footer-menu__item"><a class="footer-menu__link" href="index.html">Авторизация</a></li>
-                </ul>
-                <ul class="socials">
-                  <li class="socials__item"><a class="socials__link" href="#">
-                      <svg class="socials__link-img">
-                        <use xlink:href="./assets/images/symbol/sprite.svg#vk_round"></use>
-                      </svg></a></li>
-                  <li class="socials__item"><a class="socials__link" href="#">
-                      <svg class="socials__link-img">
-                        <use xlink:href="./assets/images/symbol/sprite.svg#github_round"></use>
-                      </svg></a></li>
-                  <li class="socials__item"><a class="socials__link" href="#">
-                      <svg class="socials__link-img">
-                        <use xlink:href="./assets/images/symbol/sprite.svg#in_round"></use>
-                      </svg></a></li>
-                </ul>
+                <div class="footer__col">
+                  <ul class="footer-menu">
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="works.html">Мои работы</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="about.html">Обо мне</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="blog.html">Блог</a></li>
+                    <li class="footer-menu__item"><a class="footer-menu__link" href="index.html">Авторизация</a></li>
+                  </ul>
+                </div>
+                <div class="footer__col">
+                  <ul class="socials">
+                    <li class="socials__item"><a class="socials__link" href="#">
+                        <svg class="socials__link-img" width="28px" height="22px">
+                          <use xlink:href="./assets/images/symbol/sprite.svg#vk"></use>
+                        </svg></a></li>
+                    <li class="socials__item"><a class="socials__link" href="#">
+                        <svg class="socials__link-img" width="28px" height="22px">
+                          <use xlink:href="./assets/images/symbol/sprite.svg#github"></use>
+                        </svg></a></li>
+                    <li class="socials__item"><a class="socials__link" href="#">
+                        <svg class="socials__link-img" width="28px" height="22px">
+                          <use xlink:href="./assets/images/symbol/sprite.svg#in"></use>
+                        </svg></a></li>
+                  </ul>
+                </div>
               </div>
               <div class="footer__row">
-                <div class="footer__text">Я веб-разработчик из Полтавы, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.</div>
-                <div class="copyright">&copy; Илья Максимов | создано с любовью в LoftSchool | 2018</div>
+                <div class="footer__col">
+                  <div class="footer__info">Я веб-разработчик из Полтавы, и этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.</div>
+                </div>
+                <div class="footer__col">
+                  <div class="footer__copyright">
+                    <div class="copyright">&copy; Илья Максимов &nbsp создано с любовью в LoftSchool 2018</div>
+                  </div>
+                </div>
               </div>
             </footer>
           </div>
-        </div>
+        </section>
       </section>
     </div>
     <script src="./assets/scripts/bundle.js"></script>

@@ -1,87 +1,131 @@
 .footer {
-    width: 100%;
     background: rgba($dark, .85);
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
 }
 
 .footer__row {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: rem(20px) 2%;
+    padding: 20px 30px;
+    border-bottom: 1px solid rgba(#fff, .5);
 
-    &:first-child {
-        border-bottom: 1px solid rgba(#fff, .1);
-    }
-
-    .socials__link {
-        width: 100%;
-        height: 100%;
-
-        @include tablets {
-            width: 36px;
-            height: 36px;
-        }
-    }
-
-    .socials__link-img {
-        width: 100%;
-        height: 100%;
-    }
-
-    .copyright {
-        color: rgba(#fff, .5);
+    &:last-child {
+        border-bottom: none;
     }
 
     @include tablets {
         flex-direction: column;
-        padding: rem(20px) rem(15px);
+    }
+
+    @include phones {
+        padding: 20px 15px;
+    }
+}
+
+.footer__col {
+    .socials {
+        display: inline-flex;
+        justify-content: center;
+    }
+    
+    .socials__item {
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    
+    .socials__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 36px;
+        height: 36px;
+        border: 1px solid rgba(#fff, .5);
+        border-radius: 50%;
+        transition: .5s;
+    
+        &:hover {
+            background: #fff;
+    
+            .socials__link-img {
+                fill: rgba($dark, .85);
+            }
+        }
+    }
+    
+    .socials__link-img {
+        width: 23px;
+        height: 17px;
+        fill: rgba(#fff, .5);
+        transition: .5s;
+    }
+
+    @include tablets {
+        margin-bottom: 20px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }
 
 .footer-menu {
-    display: inline-flex;
-
-    @include tablets {
-        margin-bottom: rem(20px);
-    }
+    display: flex;
 }
 
 .footer-menu__item {
-    margin-right: rem(30px);
+    margin-right: 40px;
 
     &:last-child {
         margin-right: 0;
     }
 
-    @include tablets {
-        margin-right: rem(10px);
+    @include phones {
+        margin-right: 10px;
     }
 }
 
 .footer-menu__link {
-    text-decoration: none;
     @include ff-main(500);
     color: #fff;
+    text-decoration: none;
+    display: block;
     transition: .35s;
 
     &:hover {
         color: $green;
     }
 
-    @include tablets {
-        font-size: rem(14px);
+    @include phones {
+        font-size: 13px;
     }
 }
 
-.footer__text {
+.footer__info {
     @include ff-main(300);
     color: rgba(#fff, .5);
-    font-size: rem(16px);
-    max-width: rem(510px);
+    max-width: 450px;
 
     @include tablets {
-        font-size: rem(13px);
+        font-size: 14px;
         text-align: center;
-        margin-bottom: rem(10px);
+    }
+}
+
+.footer__copyright {
+    .copyright {
+        @include ff-main(300);
+        color: rgba(#fff, .5);
+    }
+
+    .copyright__descr {
+        &:before, &:after {
+            background: rgba(#fff, .5);
+        }
     }
 }

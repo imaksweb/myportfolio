@@ -1,0 +1,23 @@
+section.header
+    .header__socials
+        include ../common/_socials
+    .header__hamburger-btn
+        a(href="").hamburger-btn#hamburger-btn
+            span.hamburger-btn__bar.hamburger-btn__bar_top
+            span.hamburger-btn__bar.hamburger-btn__bar_middle
+            span.hamburger-btn__bar.hamburger-btn__bar_bottom
+    .hide-menu#hide-menu
+        .hide-menu__left
+        .hide-menu__right
+        +menu(menu, 'nav')
+    .header__hero
+        include ../common/_hero.pug
+    .triangles
+        svg(xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1000 85" preserveaspectratio="none" class="triangles__svg")
+            polygon(class="left" points="0,0   0,86   500.8,86   500.8,75.5")
+            polygon(class="right" points="1000,0   1000,86   500,86   500,75.5")
+    .header__arrow-down
+        .arrow-down
+            a(href="#").arrow-down__link
+                svg(width="26px" height="16px" class="arrow-down__icon")
+                    use(xlink:href="./assets/images/symbol/sprite.svg#arrow_down")

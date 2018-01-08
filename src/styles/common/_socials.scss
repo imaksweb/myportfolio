@@ -1,46 +1,27 @@
 .socials {
     display: inline-flex;
+    justify-content: center;
 }
 
 .socials__item {
-    width: rem(32px);
-    height: rem(32px);
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    margin-right: rem(24px);
-
-    &:last-child {
-        margin-right: 0;
-    }
-
-    @include phones {
-        height: rem(20px);
-    }
+    flex: 1;
+    padding: 0 10px;
 }
 
 .socials__link {
-    display: block;
-
-    &:hover {
-        .socials__link-img {
-            fill: #fff;
-        }
-        .socials__link-img_green {
-            fill: $green;
-        }
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
 }
 
 .socials__link-img {
-    fill: rgba(#fff, .5);
-    display: block;
-    width: rem(30px);
-    height: rem(22px);
+    width: 28px;
+    height: 22px;
+    fill: rgba($green, .5);
     transition: .35s;
 
-    @include phones {
-        width: rem(25px);
-        height: rem(18px);
+    &:hover {
+        fill: $green;
     }
 }

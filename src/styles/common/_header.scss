@@ -1,44 +1,241 @@
 .header {
-    background-image: url('../images/bgs/titles/about_header-title_bg.png'), url('../images/bgs/about_bg.jpg');
-    background-position: center center, center top;
-    background-repeat: no-repeat, no-repeat;
-    background-size: auto, cover;
-    height: 100%;
+    width: 100%;
+    height: 100vh;
     position: relative;
+    @include bg($headerBg, center, center);
 }
 
 .header__socials {
-    display: inline-block;
     position: absolute;
+    top: 5%;
     left: 2%;
-    top: 4%;
-}
+    
+    .socials__link-img {
+        fill: rgba(#fff, .5);
 
-.header__humburger-trigger {
-    position: absolute;
-    top: 4%;
-    right: 2%;
-}
-
-.header__hero {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    top: 50%;
-
-    .hero__title {
-        font-size: rem(35px);
-
-        @include phones {
-            font-size: rem(21px);
+        &:hover {
+            fill: #fff;
         }
     }
 }
 
-.header__arrow {
+.header__hamburger-btn {
+    position: absolute;
+    top: 5%;
+    right: 2%;
+}
+
+.hamburger-btn {
+    width: 40px;
+    height: 36px;
+    display: inline-block;
+    position: relative;
+    z-index: 15;
+
+    @include phones {
+        width: 25px;
+        height: 22px; 
+    }
+}
+
+.hamburger-btn__bar {
+    display: block;
+    width: 100%;
+    height: 5px;
+    border-radius: 5px;
+    background: #fff;
+    position: absolute;
+    transition: .5s;
+
+    @include phones {
+        height: 4px;
+    }
+}
+
+.hamburger-btn__bar_middle {
+    top: 15px;
+
+    @include phones {
+        top: 9px;
+    }
+}
+
+.hamburger-btn__bar_bottom {
+    top: 30px;
+
+    @include phones {
+        top: 18px;
+    }
+}
+
+.hamburger-btn_active {
+    .hamburger-btn__bar_top {
+        transform: translateY(15px) rotate(45deg);
+
+        @include phones {
+            transform: translateY(9px) rotate(45deg);
+        }
+    }
+
+    .hamburger-btn__bar_middle {
+        opacity: 0;
+    }
+
+    .hamburger-btn__bar_bottom {
+        transform: translateY(-15px) rotate(-45deg);
+
+        @include phones {
+            transform: translateY(-9px) rotate(-45deg);
+        }
+    }
+}
+
+.hide-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: 1s;
+    z-index: 10;
+
+    &_active {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.hide-menu__left, .hide-menu__right {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: rgba($green, .87);
+    transition: .7s;
+}
+
+.hide-menu__left {
+    left: 0;
+    transform: translateX(-100%);
+}
+
+.hide-menu__right {
+    right: 0;
+    transform: translateX(100%);
+}
+
+.hide-menu_active {
+    .hide-menu__left, .hide-menu__right {
+        transform: translateX(0);
+    }
+}
+
+.nav-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    transition: .5s;
+
+    &_active {
+        opacity: 1;
+    }
+}
+
+.nav-menu__item {
+    margin-bottom: 60px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.nav-menu__link {
+    font-family: $ff-titles;
+    font-size: 63px;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    padding: 0 40px;
+
+    &:before, &:after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 5px;
+        background: #fff;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: .5s;
+    }
+
+    &:before {
+        left: 0;
+    }
+
+    &:after {
+        right: 0;
+    }
+
+    &:hover {
+        &:before, &:after {
+            width: 22px;
+        }
+    }
+
+    @include tablets {
+        font-size: 49px;
+    }
+
+    @include phones {
+        font-size: 35px;
+    }
+}
+
+.header__hero {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.triangles {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+}
+
+.triangles__svg {
+    display: block;
+}
+
+.header__arrow-down {
     position: absolute;
     left: 50%;
-    bottom: 6%;
+    bottom: 7%;
     transform: translateX(-50%);
-    z-index: 100;
+}
+
+.arrow-down {
+    &:hover {
+        .arrow-down__link {
+            transform: scale(1.2);
+        }
+    }
+}
+
+.arrow-down__link {
+    display: block;
+    transition: .35s;
+}
+
+.arrow-down__icon {
+    fill: rgba(#fff, .7);
 }

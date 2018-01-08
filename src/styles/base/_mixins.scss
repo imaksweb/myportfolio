@@ -1,0 +1,10 @@
+@function rem($px) {
+    @return $px / 16px + 0rem;
+}
+
+@mixin bg($path, $xPos, $yPos) {
+    background-image: url($path);
+    background-repeat: no-repeat;
+    background-position: $xPos $yPos;
+    background-size: cover;
+}

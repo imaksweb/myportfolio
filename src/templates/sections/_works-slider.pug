@@ -1,0 +1,41 @@
+section.works__slider
+    .slider
+        .slider__info
+            .slider__info-wrap
+                ul.info-list
+                    each item in slides
+                        li.info__item
+                            .info-title
+                                .subtitle= `${item.title}`
+                            .info-tags= `${item.tags}`
+                            .info-btn
+                                a(href="#").slider__info-link
+                                    svg(width="20px" height="19px").slider__link-icon
+                                        use(xlink:href="./assets/images/symbol/sprite.svg#link")
+                                    .slider__link-text Посмотреть сайт
+        .slider__display
+            .slider__display-wrap
+                ul.display__list
+                    each item, ndx in slides
+                        li.display__item
+                            img.display__img(src=`./assets/images/content/slides/${ndx+1}.png`, alt="", srcset="")
+        .slider__btns 
+            .controls.controls__prev
+                .controls__arrow
+                    svg.controls__pic
+                        use(xlink:href="./assets/images/symbol/sprite.svg#arrow_down")
+                .controls__bg
+                    ul.controls__bg-list
+                        each item, ndx in slides
+                            li.controls__bg-item
+                                img.slider-img(src=`./assets/images/content/slides/${ndx+1}.png`, alt="", srcset="")
+            .controls.controls__next   
+                .controls__arrow
+                    svg.controls__pic
+                        use(xlink:href="./assets/images/symbol/sprite.svg#portf_arrow_up")
+                .controls__bg
+                    ul.controls__bg-list
+                        each item, ndx in slides
+                            li.controls__bg-item
+                                img.slider-img(src=`./assets/images/content/slides/${ndx+1}.png`, alt="", srcset="")
+    
