@@ -1,36 +1,8 @@
-mixin socials(socials)
-    ul.socials
-        each item in socials
-            li.socials__item
-                a.socials__link(href=`${item.link}`)
-                    svg.socials__link-img
-                        use(xlink:href=`./assets/images/symbol/sprite.svg#${item.icon}`)
-
-mixin menu(menu)
-    ul.menu
+mixin menu(menu, className)
+    ul(class=`${className}-menu`)
         each item in menu
-            li.menu__item
-                a.menu__link(href=`${item.link}`) #{item.title}
-
-mixin footer-menu(footer_menu)
-    ul.footer-menu
-        each item in footer_menu
-            li.footer-menu__item
-                a.footer-menu__link(href=`${item.link}`) #{item.title}
-
-mixin hero-pic(hero)
-    .hero__pic
-        img.hero__pic-img(src=`${hero.img}`, alt="")
-
-mixin hero-descr(hero)
-    .hero__descr
-        .hero__title #{hero.title}
-        .hero__subtitle #{hero.subtitle}
-
-mixin arrow-down(arrow)
-    a.arrow-down(href=`${arrow.link}`)
-        svg.arrow-down__ico
-            use(xlink:href=`./assets/images/symbol/sprite.svg#${arrow.icon}`)
+            li(class=`${className}-menu__item`)
+                a(href=`${item.link}` class=`${className}-menu__link`) #{item.title}
 
 mixin skills(skills)
     ul.skills

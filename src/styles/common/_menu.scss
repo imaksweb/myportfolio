@@ -1,29 +1,31 @@
-.menu {
+.welcome-menu {
     display: flex;
+    background: rgba($green, .85);
 }
 
-.menu__item {
-    display: block;
-    border-right: 2px solid #73c8c0;
+.welcome-menu__item {
     flex: 1;
+    border-right: 2px solid rgba(#fff, .5);
 
     &:last-child {
         border-right: none;
     }
 }
 
-.menu__link {
+.welcome-menu__link {
     text-decoration: none;
     display: block;
     @include ff-main(500);
-    font-size: rem(16px);
+    font-size: 16px;
     color: #fff;
-    padding: rem(12px) 0;
-    background: rgba($green, .85);
-    transition: .5s;
+    padding: 12px 0;
+    transition: .35s;
 
     &:hover {
-        background: rgba($darkGreen, .85);
+        background: $darkGreen;
+    }
+
+    @include phones {
+        font-size: 14px;
     }
 }
-  

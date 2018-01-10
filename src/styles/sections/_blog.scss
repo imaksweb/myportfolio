@@ -1,0 +1,172 @@
+.blog {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    .triangles__svg {
+       fill: #fff; 
+    }
+}
+
+.blog__main {
+    display: flex;
+    padding-top: 50px;
+    padding-bottom: 185px;
+    position: relative;
+}
+
+.blog__sidebar {
+    width: 25%;
+    padding: 0 20px;
+    min-height: 1px;
+
+    @include tablets {
+        display: none;
+    }
+}
+
+.blog__sidebar-wrap {
+    position: relative;
+    top: 0;
+}
+
+.blog__sidebar-wrap.fixed {
+    left: 0;
+    width: 25%;
+    padding: 40px 20px 0;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+}
+
+.blog-menu {
+    text-align: right;
+}
+
+.blog-menu__item {
+    @include ff-main(500);
+    padding: 15px 20px 15px 0;
+    border-right: 3px solid transparent;
+    transition: .35s;
+    cursor: pointer;
+
+    &_active {
+        border-right-color: $green;
+        color: $green;
+    }
+
+    &:hover {
+        color: $green;
+    }
+
+    @include laptops {
+        font-size: 14px;
+    }
+}
+
+.blog__content {
+    width: 60%;
+    padding: 0 40px;
+    position: relative;
+
+    @include tablets {
+        width: 100%;
+    }
+
+    @include phones {
+        padding: 0 25px;
+    }
+}
+
+.news {
+    margin-bottom: 50px;
+    border-bottom: 4px solid rgba($dark, .07);
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.news__title {
+    margin-bottom: 20px;
+
+
+}
+
+.news__date {
+    color: $green;
+    margin-bottom: 20px;
+
+    @include tablets {
+        font-size: 14px;
+    }
+}
+
+.news__text {
+    padding-bottom: 50px;
+
+    @include tablets {
+        font-size: 14px;
+    }
+}
+
+.news__text p {
+    margin-bottom: 15px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.blog__mobile-menu-wrap {
+    position: fixed;
+    max-width: 284px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: $green;
+    align-items: center;
+    box-shadow: 3px 0px 3px 0px rgba(0, 0, 0, 0.2);
+    display: flex;
+    transform: translateX(-304px);
+    transition: .5s;
+
+    @include tablets {
+        transform: translateX(-284px);
+
+        &_active {
+            transform: translateX(0);
+        }
+    
+    }
+}
+
+.blog-mobile-menu {
+    text-align: right;
+    padding: 0 20px;
+}
+
+.blog-mobile-menu__item {
+    @include ff-main(500);
+    color: rgba(#fff, .7);
+    margin-bottom: 30px;
+
+    &:hover, &_active {
+        color: #fff;
+    }
+}
+
+.mobile-menu__trigger {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 92%;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: $green;
+    cursor: pointer;
+}
+  

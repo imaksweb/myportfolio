@@ -1,0 +1,6 @@
+ul.socials
+    each item in socials
+        li.socials__item
+            a.socials__link(href=`${item.link}`)
+                svg(width="28px" height="22px").socials__link-img
+                    use(xlink:href=`./assets/images/symbol/sprite.svg#${item.icon}`)

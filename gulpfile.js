@@ -7,7 +7,6 @@ const sass = require('gulp-sass');
 const rename = require('gulp-rename');
 const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('gulp-autoprefixer');
-const tinypng = require('gulp-tinypng');
 const svgmin = require('gulp-svgmin');
 const replace = require('gulp-replace');
 const cheerio = require('gulp-cheerio');
@@ -41,7 +40,7 @@ const paths = {
         dest: 'build/assets/images/'
     },
     fonts: {
-        src: 'src/fonts/**/*.{woff,woff2,eot,svg,ttf}',
+        src: 'src/fonts/**/*.{woff,woff2}',
         dest: 'build/assets/fonts'
     },
     svg: {
@@ -96,7 +95,6 @@ function images_dev() {
 
 function images_build() {
     return gulp.src(paths.images.src)
-        .pipe(tinypng('sKMWeC_PI-Hg0mDj_YuMRQYMHPVg71Y4'))
         .pipe(gulp.dest(paths.images.dest));
 };
 
@@ -184,6 +182,5 @@ gulp.task('default', gulp.series(
 
 gulp.task('build', gulp.series(
     clean,
-    gulp.parallel(templates, styles_build, scripts, images_build, fonts, sprite_svg),
-    gulp.parallel(watch, serve)
+    gulp.parallel(templates, styles_build, scripts, images_build, fonts, sprite_svg)
 ));

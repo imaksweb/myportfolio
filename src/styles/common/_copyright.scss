@@ -1,8 +1,16 @@
 .copyright {
     @include ff-main(300);
-    font-size: rem(16px);
+    color: #fff;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 
-    &_white {
-        color: #fff;
+    @include tablets {
+        font-size: 14px;
+    }
+
+    @include phones {
+        flex-direction: column;
     }
 }

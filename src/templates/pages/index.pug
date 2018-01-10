@@ -5,18 +5,61 @@ block variables
 
 block content
     section.welcome
-        .welcome__authorisation
-            .authorisation
-                a.authorisation__link(href="#") Авторизоваться
-        .welcome__hero
-            .hero
-                .hero__data.hero__data_bg-white
-                    +hero-pic(hero)
-                    +hero-descr(hero)
-                    .hero__socials
-                        +socials(socials)
-                nav.hero__menu
-                    +menu(menu)
-        .welcome__copyright.copyright_white
-            include ../common/_copyright
+        .welcome__parallax#parallax
+            - for (var i = 1; i < 9; i++)
+                .parallax__layer
+                    img(src=`./assets/images/bg/parallax/${i}.png`).parallax__img
 
+        .welcome__authorisation-btn
+            a(href="#").authorisation-btn#authorisation-btn Авторизоваться
+        
+        .welcome__flip
+            .flip-container
+                .flipper
+                    .front
+                        .front__content
+                            .front__hero
+                                include ../common/_hero
+                            .front__socials
+                                include ../common/_socials
+                        .front__nav
+                            +menu(welcome_menu, 'welcome')
+                    .back
+                        .authorisation
+                            .authorisation__content
+                                .authorisation__title.subtitle Авторизуйтесь
+                                .authorisation__form
+                                    form(action="" method="post").login-form#autherisation-form
+                                        .form-content
+                                            .form__inputs
+                                                .form__input-wrap
+                                                    input(type="text" name="login" placeholder="Логин" required).form__input#login
+                                                    .form__input-icon
+                                                        svg(width="16px" height="16px").form__input-svg
+                                                            use(xlink:href="./assets/images/symbol/sprite.svg#login")
+                                                .form__input-wrap
+                                                    input(type="password" name="password" placeholder="Пароль" required).form__input#password
+                                                    .form__input-icon
+                                                        svg(width="16px" height="16px").form__input-svg
+                                                            use(xlink:href="./assets/images/symbol/sprite.svg#password")
+                                            .form__options
+                                                .form__row
+                                                    input(type="checkbox" name="ishuman" value="1").form__checkbox.visually-hidden#ishuman
+                                                    label(for="ishuman").form__checkbox-label Я человек
+                                                        svg(width="11px" height="9px").form__checkbox-icon
+                                                            use(xlink:href="./assets/images/symbol/sprite.svg#check")
+                                                .form__row
+                                                    .form__options-text Вы точно не робот?
+                                                    input(type="radio" name="robot" value="human").form__radio.visually-hidden#human
+                                                    label(for="human").form__radio-label Да
+                                                    input(type="radio" name="robot" value="robot").form__radio.visually-hidden#robot
+                                                    label(for="robot").form__radio-label Не уверен
+                                            .form__btns
+                                                ul.form__btns-list
+                                                    li.form__btns-item
+                                                        a(href="#").form__btns-link.back-btn На главную
+                                                    li.form__btns-item
+                                                        button(type="submit" name="enter").form__btns-link Войти
+        .welcome__copyright
+            include ../common/_copyright
+                                    

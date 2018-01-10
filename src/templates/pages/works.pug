@@ -4,6 +4,7 @@ block variables
     - var title = 'Мои работы'
 
 block content
-    header.header.myworks-header
-        include ../sections/_header
-    include ../sections/_myworks
+    section.works
+        include ../common/_header
+        include ../sections/_works-slider
+        include ../sections/_works-reviews
